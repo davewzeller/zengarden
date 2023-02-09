@@ -1,0 +1,546 @@
+//google fonts that go along with under the sea theme yet are still readable
+
+
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Electrolize&family=Kanit:wght@100;300&display=swap');
+
+
+
+// varables sections
+
+$coral_01: #e40d17;
+$coral_02: #0aaa2d;
+$coral_03: #003cff;
+$coral_04: #f71b94;
+$coral_05: #cc8a10;
+$coral_06: #2bff00;
+$coral_07: #a997ba;
+
+
+ 
+body {
+  font-family: 'Kanit', sans-serif;
+  background: rgb(128, 234, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(128, 234, 255, 1) 35%,
+    rgba(21, 79, 101, 1) 97%
+  );
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: .7fr 1.3fr 1fr 1fr 1.5fr 0.5fr;
+    gap: 8px 9px;
+     
+    cursor: crosshair, auto;
+   
+     
+}
+
+h3 {
+  font-family: 'East Sea Dokdo', cursive;
+  font-size: 5rem;
+
+}
+
+ 
+.page-wrapper {
+
+  font-size: xx-large;
+ 
+  text-align: center;
+  padding-top: -5rem;
+ 
+  
+
+  grid-area: 1 / 3 / 7 / 5;
+
+ 
+}
+
+ 
+
+
+//this is where we added the SVG foreground layer and the content of the text can be scrolled underneath it
+body:before {
+
+  grid-area: 1 / 1 / 7 / 7;
+  
+  pointer-events: none;
+  content: "";
+  background-image: url("foreground.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  height: 120%;
+  width: 105%;
+  top: 0;
+  left: 0;
+  margin:-1rem -1rem 1rem -5rem;
+  z-index: 1;
+}
+ 
+
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 100% 0;
+  }
+}
+
+
+@mixin fish {
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    background-size: 20%;
+    
+}
+
+@mixin linear {
+  animation: animatedBackground 10s linear infinite;
+  
+}
+@mixin ease-out {
+  animation: animatedBackground 10s ease-out infinite;
+  animation-direction: reverse;
+}
+@mixin ease-in {  animation: animatedBackground 10s ease-in infinite;}
+
+@mixin ease-in2 {  animation: animatedBackground 5s ease-in infinite;}
+@mixin ease {
+  animation: animatedBackground 10s ease infinite;
+  animation-direction: reverse;
+}
+ 
+
+.intro {
+
+  margin-top: 15rem;
+ 
+
+ 
+  h1 {
+    background-image: url('sub.svg');
+    background-repeat: no-repeat;
+    color: rgb(230, 230, 230, .0001);
+ 
+    @include ease-in;
+ 
+    
+}
+
+h2{
+  background-image: url('sub.svg');
+  background-repeat: no-repeat;
+  color: rgb(230, 230, 230, .0001);
+
+  @include ease-in2;
+
+  
+}
+
+
+}
+
+
+ 
+
+
+
+.explanation {
+  
+  background-image: url('fish 4.svg');
+  @include fish;
+  @include ease-out;
+  
+  
+}
+
+.participation {
+    background-image: url('fish 1.svg');
+    @include fish;
+   @include linear;
+
+}
+.benefits{
+      background-image: url('fish 2.svg');
+      @include fish;
+      @include ease-in;
+}
+.requirements {
+    background-image: url('fish 3.svg');
+    @include fish;
+    @include ease;
+    color: rgb(229, 216, 254);
+    a:link {
+      color: rgb(245, 170, 252);
+      text-decoration: none;
+     
+    }
+}
+.participation :nth-child(2) {
+
+   a:link {
+    color: $coral_01;
+    text-decoration: none;
+  }
+}
+
+.participation :nth-child(4) {
+
+  a:nth-child(1) {
+   color:$coral_02;
+   text-decoration: none;
+ }
+ a:nth-child(2) {
+  color: $coral_03;
+  text-decoration: none;
+}
+a:nth-child(4) {
+  color: $coral_04;
+  text-decoration: none;
+}
+
+
+}
+
+.requirements :nth-child(5) {
+
+  a:nth-child(1) {
+   color:$coral_05;
+   text-decoration: none;
+ }
+ a:nth-child(2) {
+  color: $coral_06;
+  text-decoration: none;
+}
+a:nth-child(3) {
+  color: $coral_07;
+  text-decoration: none;
+}
+
+a:nth-child(4) {
+  color: coral_01;
+  text-decoration: none;
+}
+}
+
+.requirements :nth-child(6) {
+
+  a:nth-child(1) {
+   color:$coral_02;
+   text-decoration: none;
+ }
+ a:nth-child(2) {
+  color: $coral_03;
+  text-decoration: none;
+}
+a:nth-child(3) {
+  color: $coral_04;
+  text-decoration: none;
+}
+
+ 
+}
+
+footer {
+  a:link {
+    color: rgb(94, 195, 17);
+    text-decoration: none;
+  }
+
+
+}
+
+
+
+.design-selection {
+
+  .select {
+    font-family: 'Electrolize', sans-serif;
+    font-size: 1rem;
+  }
+
+   
+
+  display: grid;
+  font-size: small;
+  position: fixed;
+  top: 3rem;
+  right: 3rem;
+  opacity: 1 !important;
+  z-index: 3;
+  margin-right: -2rem;
+  width: 23%;
+  grid-template-columns: 1fr 1fr;
+
+ 
+    grid-area: 2 / 5 / 6 / 7;
+
+
+
+  ul {
+  
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+
+    li {
+
+      font-family: cursive;
+  
+      display: flex;
+      list-style: none;
+      font-size: .6rem;
+      margin: 1rem;
+      color: #000;
+      background: #ffc;
+      display: block;
+      height: 12em;
+      width: 12em;
+      text-align: center;
+    }
+    
+  }
+
+
+}
+
+ 
+
+.design-archives {
+  margin-top: -5rem;
+  margin-bottom: 10rem;
+  .archives {
+    font-family: 'Electrolize', sans-serif;
+    font-size: 2rem;
+
+
+  }
+
+  font-size: medium;
+  
+  grid-area: 1 / 1 / 4 / 3;
+  
+  position: fixed;
+  bottom: 17rem;
+  margin-top: 0.1rem;
+  opacity: 1 !important;
+  z-index: 3;
+  margin-left: -40rem;
+  width: 23%;
+  
+  li {
+    list-style: none;
+    font-size: 0.8em;
+    overflow: hidden;
+    margin: 1em;
+    padding: 2.3em;
+
+
+    margin: 1rem;
+    
+    list-style: none;
+    font-size: 0.8em;
+    overflow: hidden;
+    padding: 1em;
+    color: grey;
+    text-decoration: none;
+
+    //button
+    box-shadow: 3px 4px 0px 0px #8a2a21;
+    background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+    background-color:#c62d1f;
+    border-radius:18px;
+    border:1px solid #d02718;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:17px;
+    padding:7px 25px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #810e05;
+
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+    
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+  }
+  ul li a {
+    word-break: break-word;
+    text-decoration: none;
+  
+    
+    height: 20em;
+    width: 20em;
+    padding: 1em;
+    margin: 3rem;
+  }
+  
+  li:hover {
+    background:linear-gradient(to bottom, #6ff708 5%, #54c61f 100%);
+	background-color:#85ec70;
+
+
+  }
+}
+
+.zen-resources {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+
+  .resources {
+   
+    font-family: 'Electrolize', sans-serif;
+    font-size: 2rem;
+  }
+  font-size: medium;
+  
+  grid-area: 5 / 1 / 6 / 3;
+  
+  position: fixed;
+  bottom: 5rem;
+
+  opacity: 1 !important;
+  z-index: 3;
+  margin-left: -40rem;
+  width: 23%;
+
+  li {
+    margin: 1rem;
+    
+    list-style: none;
+    font-size: 0.8em;
+    overflow: hidden;
+    padding: 1em;
+
+    //button
+    box-shadow: 3px 4px 0px 0px #8a2a21;
+    background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+    background-color:#c62d1f;
+    border-radius:18px;
+    border:1px solid #d02718;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:17px;
+    padding:7px 25px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #810e05;
+
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+    
+  }
+
+  li:hover {
+    background:linear-gradient(to bottom, #6ff708 5%, #54c61f 100%);
+	background-color:#85ec70;
+
+
+  }
+
+
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+
+}
+
+ol {
+  list-style-type: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+footer::after {
+  margin-bottom: -10rem;
+  content: url('treasure_chest.svg');
+  
+}
+
+/*.css-zen-garden {
+    
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "intro intro intro intro intro intro" ". . main-supporting main-supporting . ." ". . participation participation . ." "footer . benefits benefits . sidebar" "footer . requirements requirements . sidebar" "footer . . . . sidebar"; }
+
+.intro {
+    grid-area: intro;
+    
+}
+
+#-zen-supporting {
+    grid-area: main-supporting;
+    
+}
+
+.participation {
+    grid-area: participation;
+}
+
+.benefits {
+    grid-area: benefits;
+}
+
+.requirements {
+    grid-area: requirements;
+}
+
+footer {
+    grid-area: footer;
+}
+
+aside {
+    grid-area: sidebar;
+}
+
+  # sourceMappingURL=style.css.map */
+
+
+@media only screen and (max-width: 750px){
+
+body:before {
+    font-size: medium;
+    margin-left: -5.5rem;
+    margin-top: -1rem;
+    pointer-events: none;
+    content: "";
+    background-image: url("mobile foreground.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+
+    width: 115%;
+    height: 110%;
+    z-index: 1;
+}
+
+
+}
+
+ 

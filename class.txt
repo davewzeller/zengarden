@@ -1,0 +1,103 @@
+
+/* id's */
+#css-zen-garden {}
+
+#zen-intro {}
+
+#zen-supporting {}
+
+#zen-summary {}
+
+#zen-preamble {}
+
+#zen-explanation {}
+
+#zen-participation {}
+
+#zen-benefits {}
+
+#zen-requirements {}
+
+#design-selection {}
+
+#design-archives {}
+
+#zen-resources {}
+
+
+/* class */
+.page-wrapper {}
+
+.extra1 {}
+
+.extra2 {}
+
+.extra3 {}
+
+.extra4 {}
+
+.extra5 {}
+
+.extra6 {}
+
+.intro {}
+
+.main.supporting {}
+
+.sidebar {}
+
+.summary {}
+
+.preamble {}
+
+.explanation {}
+
+.participation {}
+
+.benefits {}
+
+.requirements {}
+
+.wrapper {}
+
+.zen-validate-html {}
+
+.zen-validate-css {}
+
+.zen-license {}
+
+.zen-accessibility {}
+
+.zen-github {}
+
+.design-selection {}
+
+.design-archives {}
+
+.zen-resources {}
+
+.select {}
+
+.archives {}
+
+.resources {}
+
+.view-css {}
+
+.css-resources {}
+
+.zen-faq {}
+
+.zen-submit {}
+
+.zen-translations {}
+
+.next {}
+
+.viewall {}
+
+.design-name {}
+
+.designer-name {}
+
+.indicator {}
